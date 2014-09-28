@@ -4,13 +4,14 @@
 module Main {
 
     class TowerController {
+
         base: number = 8
         max: number = 10
         tower: Tower.Tower
         attempt: number[][]
         result: Tower.Result
 
-        constructor() {
+        constructor(private $scope: ng.IScope) {
            this.refresh()
         }
 

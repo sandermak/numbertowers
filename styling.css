@@ -29,6 +29,16 @@ body {
     padding: 1em;
 }
 
+.tower {
+    display: inline-block;
+    text-align: center;
+    width: 51%;
+}
+
+input.wrong {
+    border: 2px solid darkorange;
+}
+
 input[type=number] {
     width: 4em;
 }
