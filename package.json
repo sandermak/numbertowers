@@ -1,0 +1,10 @@
+{
+  "name": "numbertowers",
+  "version": "0.0.1",
+  "devDependencies": {
+    "ecstatic": "0.5.4",
+    "gulp": "3.8.7",
+    "gulp-rimraf": "0.1.0",
+    "gulp-typescript": "2.0.0"
+  }
+}

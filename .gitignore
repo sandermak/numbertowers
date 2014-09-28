@@ -1,0 +1,5 @@
+*.map
+.idea
+*.iml
+/node_modules
+/static
