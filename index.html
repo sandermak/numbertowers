@@ -11,12 +11,12 @@
 </head>
 
 <body class="background" ng-controller="TowerController as ctrl">
-<h2>Getallentorens voor Ruben en Thomas</h2>
+    <h2 class="title">Getallenpiramide voor Ruben en Thomas</h2>
     <div class="container">
         <label for="base">Hoeveel vakjes?</label>
-        <input id="base" type="number" ng-model="ctrl.base" ng-change="ctrl.refresh()">
-        <label for="max">Hoogste getal</label>
-        <input id="max" type="number" ng-model="ctrl.max" ng-change="ctrl.refresh()">
+        <input id="base" type="number" min="3" max="16" ng-model="ctrl.base" ng-change="ctrl.refresh()">
+        <label for="max">Hoogste getal:</label>
+        <input id="max" type="number" ng-model="ctrl.max" min="1" max="9999" ng-change="ctrl.refresh()">
         <input type="submit" ng-click="ctrl.check()" value="Controleer">
         <br>
         <br>
@@ -28,11 +28,13 @@
 
         </div>
 
-        <h2 ng-if="ctrl.result.overall">
-            Goed zo!
+        <div ng-if="ctrl.result.overall">
+            <h2>Goed zo!</h2>
             <input type="submit" ng-click="ctrl.refresh()" value="Nog een keer">
+            <br>
+            <br>
             <img src="http://edgecats.net">
-        </h2>
+        </div>
     </div>
 </body>
 </html>

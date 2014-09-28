@@ -2,7 +2,12 @@ body {
     padding: 3em;
     font-family: sans-serif;
     color: white;
-
+}
+h2.title {
+    padding: 0.5em;
+    background-color: #666666;
+    border-radius: 3px;
+    width: 68%;
 }
 .background {
     background-image: url("numbers.jpg");
@@ -19,9 +24,9 @@ body {
     bottom: 0;
     z-index: -1;
     border-radius: 3px;
-    background: whitesmoke;
-    opacity: 0.3;
-    width: 50%;
+    background: gray;
+    opacity: 0.6;
+    width: 70%;
 }
 .container {
     position: relative;
@@ -32,7 +37,7 @@ body {
 .tower {
     display: inline-block;
     text-align: center;
-    width: 51%;
+    width: 71%;
 }
 
 input.wrong {

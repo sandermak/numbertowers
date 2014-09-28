@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 
 var output = "static/"
 var tsScriptFiles = "*.ts"
-var staticAssetPaths = ["*.html", "*.jpg", "*.css", "*.js"];
+var staticAssetPaths = ["*.html", "*.jpg", "*.css", "*.js", "!gulpfile.js"];
 
 gulp.task('default', ['clean'], function() {
     return gulp.start('watch');
