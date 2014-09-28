@@ -10,8 +10,26 @@
     <title>Getallen torens</title>
 </head>
 
-<body class="background" ng-controller="TowerController">
-<h2>Getallen torens voor Ruben en Thomas</h2>
-    <div class="container">{{ foo }}</div>
+<body class="background" ng-controller="TowerController as ctrl">
+<h2>Getallentorens voor Ruben en Thomas</h2>
+    <div class="container">
+        <label for="base">Hoeveel vakjes?</label>
+        <input id="base" type="number" ng-model="ctrl.base" ng-change="ctrl.refresh()">
+        <label for="max">Hoogste getal</label>
+        <input id="max" type="number" ng-model="ctrl.max" ng-change="ctrl.refresh()>
+        <input type="submit" ng-click="ctrl.check()" value="Controleer">
+        <ul>
+            <li ng-repeat="row in ctrl.attempt track by $index">
+                Row:
+                <span ng-repeat="cell in row track by $index">
+                    <input type="number" ng-model="ctrl.attempt[$parent.$index][$index]">
+                </span>
+            </li>
+        </ul>
+        <h2 ng-if="ctrl.result.overall">
+            Goed zo!
+            <input type="submit" ng-click="ctrl.refresh()" value="Nog een keer">
+        </h2>
+    </div>
 </body>
 </html>
