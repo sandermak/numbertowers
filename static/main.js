@@ -10,6 +10,8 @@ var Main;
             this.refresh();
         }
         TowerController.prototype.check = function () {
+            if (this.imageURL === undefined)
+                this.imageURL = "http://edgecats.net?" + Math.ceil(Math.random() * 1e6);
             this.result = this.tower.check(this.attempt);
         };
 
@@ -17,6 +19,7 @@ var Main;
             this.tower = new Tower.Tower(this.base, this.max);
             this.attempt = this.tower.getStartingPoint();
             this.result = undefined;
+            this.imageURL = undefined;
         };
         return TowerController;
     })();
