@@ -23,6 +23,7 @@
         <div class="tower" ng-repeat="row in ctrl.attempt track by $index">
             <span ng-repeat="cell in row track by $index">
                 <input type="number" ng-model="ctrl.attempt[$parent.$index][$index]"
+                        ng-disabled="$parent.$index == 0"
                         ng-class="{wrong: ctrl.result.cells[$parent.$index][$index] !== undefined && !ctrl.result.cells[$parent.$index][$index]}">
             </span>
 
